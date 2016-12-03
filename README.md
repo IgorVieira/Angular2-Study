@@ -11,6 +11,7 @@
  
 Enter the client directory and
 ```
+ npm start
  npm install
 ```
 
@@ -18,6 +19,7 @@ Enter the client directory and
 In other terminal, enter the server directory and
 ```
  npm start
+ npm install
 ```
 
 Open in localhost:3000
