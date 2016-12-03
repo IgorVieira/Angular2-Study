@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
-import {FotoComponent } from '../foto/foto.component'
+import { FotoComponent } from '../foto/foto.component'
 import { Http, Headers} from '@angular/http'
-
+import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 
 
 @Component({
@@ -15,10 +15,16 @@ export class CadastroComponent {
 
     foto: FotoComponent = new FotoComponent()
     http:Http
+    meuForm: FormGroup
    
-    constructor(http:Http){
+    constructor(http:Http, fb:FormBuilder){
 
         this.http = http
+        this.meuForm = fb.group({
+            titulo:['', Validators.compose([Validators.required, Validators.minLength(4)])],
+            url:['', Validators.required],
+            descricao:['']
+        })
     }
 
 
