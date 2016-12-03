@@ -8,6 +8,7 @@ import { CadastroComponent } from './cadastro/cadastro.component'
 import { ListagemComponent } from './listagem/listagem.component'
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routes'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { routing } from './app.routes'
      FotoModule,
      HttpModule,
      PainelModule,
-     routing 
+     routing,
+     FormsModule 
   ],
   declarations: [ AppComponent, CadastroComponent, ListagemComponent ],
   bootstrap:    [ AppComponent ]
