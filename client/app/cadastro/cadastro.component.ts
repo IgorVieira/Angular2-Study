@@ -52,11 +52,11 @@ export class CadastroComponent {
         console.log(this.foto)
 
         this.service.cadastra(this.foto)
-            .subscribe(() => {
+            .subscribe(res => {
+                this.mensagem = res.mensagem
                 this.foto = new FotoComponent();
-                this.mensagem = 'Imagem salva com sucesso'
-                this.router.navigate([''])
-            }, erro => {
+               if(!res.inclusao) this.router.navigate(['']);
+            }, erro => {    
                 this.mensagem = 'Erro ao salvar a imagem'
             });
     }
