@@ -7,7 +7,9 @@ import { ListagemComponent } from './listagem/listagem.component'
 const appRoutes: Routes = [
 
     { path: '', component: ListagemComponent },
-    { path: 'cadastro', component: CadastroComponent }
+    { path: 'cadastro', component: CadastroComponent },
+    { path: 'cadastro/:id', component: CadastroComponent },
+    { path: '**', redirectTo: ''}
 
 ]
 
