@@ -16,6 +16,7 @@ export class ListagemComponent{
 
 
     constructor(service: FotoService) {
+
         this.service = service
 
         this.service
@@ -27,13 +28,14 @@ export class ListagemComponent{
     }
 
     remove(foto){
+
         this.service
-        .remove(foto)
-        .subscribe(()=>{
-            let novasFotos = this.fotos.slice(0)
-            let indice = novasFotos.indexOf(foto)
-            novasFotos.slice(indice, 1)
-            this.fotos = novasFotos
+            .remove(foto)
+            .subscribe(()=>{
+                let novasFotos = this.fotos.slice(0)
+                let indice = novasFotos.indexOf(foto)
+                novasFotos.splice(indice, 1)
+                this.fotos = novasFotos
 
         }, erro => console.log(erro))
     }
