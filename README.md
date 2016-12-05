@@ -6,7 +6,7 @@
 ## Usage
 
 ```
-  https://github.com/IgorVieira/Angular2-Study.git
+ git clone https://github.com/IgorVieira/Angular2-Study.git
 ```
  
 Enter the client directory and
