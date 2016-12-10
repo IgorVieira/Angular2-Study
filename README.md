@@ -11,15 +11,16 @@
  
 Enter the client directory and
 ```
- npm start
  npm install
+ npm start
+
 ```
 
 
 In other terminal, enter the server directory and
 ```
- npm start
  npm install
+ npm start
 ```
 
 Open in localhost:3000
